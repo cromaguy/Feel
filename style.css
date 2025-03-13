@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: url("https://w.wallhaven.cc/full/7p/wallhaven-7pd3l9.jpg");
+    background: url("https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,7 +30,7 @@ body {
 }
 
 body.dark-mode {
-    background: url("https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: url("https://w.wallhaven.cc/full/qz/wallhaven-qzwzo5.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -39,7 +39,7 @@ body.dark-mode {
 
 .container {
     border-radius: 20px;
-    padding: 30px;
+    padding: 40px;
     width: 100%;
     max-width: 500px;
     background-color: var(--light-bg);
@@ -90,7 +90,7 @@ body.dark-mode .container {
 }
 
 input {
-    width: 70%;
+    width: 90%;
     padding: 12px 15px;
     border: none;
     border-radius: 10px 0 0 10px;
@@ -388,7 +388,7 @@ body.dark-mode .search-history li {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 20px;
+        padding: 30px;
     }
     
     .weather-metrics {
@@ -403,8 +403,8 @@ body.dark-mode .search-history li {
 
 @media (max-width: 480px) {
     .container {
-        border-radius: 15px;
-        padding: 15px;
+        border-radius: 20px;
+        padding: 30px;
     }
     
     .header h1 {
@@ -421,7 +421,7 @@ body.dark-mode .search-history li {
     }
     
     .search-box input {
-        width: 100%;
+        min-width: 90%;
         border-radius: 10px;
         margin-bottom: 10px;
     }

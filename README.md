@@ -2,7 +2,7 @@
 # 🌦️ Project Feel (BETA) - Weather App  
 A **modern, responsive weather app** that provides real-time weather updates, a **5-day forecast**, and **auto-location detection**.  
 
-![Weather App](https://feel-one.vercel.app/)  
+[Weather App](https://feel-one.vercel.app/)  
 
 ## 🚀 Features  
 ✅ **Current Weather** (Temperature, Humidity, Condition)  

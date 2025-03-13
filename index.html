@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="https://event.kiit.ac.in/wp-content/uploads/2021/11/KIIT-Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Project Feel <span class="badge">BETA</span></h1>
+            <h3>By: Anjishnu Nandi</h3>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <button id="locationBtn"><i class="fas fa-map-marker-alt"></i> Use My Location</button>
+
+        <div class="weather-info">
+            <div class="location-info">
+                <h2 id="cityName">City</h2>
+                <p id="date"></p>
+            </div>
+            
+            <div class="weather-details">
+                <div class="weather-main">
+                    <img id="weatherIcon" src="" alt="Weather Icon">
+                    <div>
+                        <p id="temperature" class="temp"></p>
+                        <p id="description" class="desc"></p>
+                    </div>
+                </div>
+                
+                <div class="weather-metrics">
+                    <div class="metric">
+                        <i class="fas fa-temperature-high"></i>
+                        <div>
+                            <p class="metric-label">Feels Like</p>
+                            <p id="feelsLike" class="metric-value"></p>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <p class="metric-label">Humidity</p>
+                            <p id="humidity" class="metric-value"></p>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p class="metric-label">Wind Speed</p>
+                            <p id="windSpeed" class="metric-value"></p>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <div>
+                            <p class="metric-label">Pressure</p>
+                            <p id="pressure" class="metric-value"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-info">
+                <div class="sun-info">
+                    <div>
+                        <i class="fas fa-sun"></i>
+                        <p class="metric-label">Sunrise</p>
+                        <p id="sunrise" class="metric-value"></p>
+                    </div>
+                    <div>
+                        <i class="fas fa-moon"></i>
+                        <p class="metric-label">Sunset</p>
+                        <p id="sunset" class="metric-value"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="forecast-container">
+            <h3>5-Day Forecast</h3>
+            <div id="forecast" class="forecast"></div>
+        </div>
+        
+        <div class="theme-toggle">
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+        </div>
+        
+        <div class="unit-toggle">
+            <button id="celsiusBtn" class="active">°C</button>
+            <button id="fahrenheitBtn">°F</button>
+        </div>
+        
+        <div class="search-history">
+            <h3>Recent Searches</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+</body>
+</html>

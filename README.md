@@ -2,9 +2,11 @@
 
 > A modern, responsive weather application providing real-time updates with a sleek interface.
 
+![Version](https://img.shields.io/badge/version-1.0-blue)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://feel-one.vercel.app/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/project-feel/pulls)
+![Made for](https://img.shields.io/badge/made%20for-KIIT%20University-orange)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="separator">

@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: url("https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: url("https://w.wallhaven.cc/full/9m/wallhaven-9mldxx.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,7 +30,7 @@ body {
 }
 
 body.dark-mode {
-    background: url("https://w.wallhaven.cc/full/qz/wallhaven-qzwzo5.png");
+    background: url("https://w.wallhaven.cc/full/rd/wallhaven-rdlr37.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -56,6 +56,12 @@ body.dark-mode .container {
 /* Header */
 .header {
     margin-bottom: 20px;
+}
+
+.kiit-logo {
+    width: 120px;
+    margin-bottom: 0px;
+    transition: transform 0.3s ease;
 }
 
 .header h1 {
@@ -210,7 +216,7 @@ body.dark-mode .weather-info {
 .metric {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(241, 241, 241, 0.721);
     padding: 10px;
     border-radius: 10px;
     transition: var(--transition);
@@ -267,7 +273,7 @@ body.dark-mode .metric {
 
 .forecast-item {
     flex: 0 0 auto;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(241, 241, 241, 0.721);
     padding: 15px;
     border-radius: 10px;
     min-width: 100px;
@@ -360,11 +366,20 @@ body.dark-mode .search-history li {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.weather-info, .forecast-container, .search-history {
+.weather-info,
+.forecast-container,
+.search-history {
     animation: fadeIn 0.5s ease-out;
 }
 
@@ -381,8 +396,13 @@ body.dark-mode .search-history li {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive Design */
@@ -390,11 +410,11 @@ body.dark-mode .search-history li {
     .container {
         padding: 30px;
     }
-    
+
     .weather-metrics {
         grid-template-columns: 1fr;
     }
-    
+
     .sun-info {
         flex-direction: column;
         gap: 15px;
@@ -406,26 +426,30 @@ body.dark-mode .search-history li {
         border-radius: 20px;
         padding: 30px;
     }
-    
+
+    .kiit-logo {
+        width: 80px;
+    }
+
     .header h1 {
         font-size: 24px;
     }
-    
+
     .weather-main .temp {
         font-size: 28px;
     }
-    
+
     .search-box {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .search-box input {
         min-width: 90%;
         border-radius: 10px;
         margin-bottom: 10px;
     }
-    
+
     .search-box button {
         width: 100%;
         border-radius: 10px;

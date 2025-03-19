@@ -40,7 +40,7 @@ body.dark-mode {
 .container {
     border-radius: 20px;
     padding: 40px;
-    width: auto;
+    width: 90%;
     max-width: 90%;
     background-color: var(--light-bg);
     box-shadow: var(--shadow);

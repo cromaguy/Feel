@@ -273,7 +273,7 @@ body.dark-mode .metric {
 
 .forecast-item {
     flex: 0 0 auto;
-    background: rgba(241, 241, 241, 0.721);
+    background: rgba(255, 255, 255, 0.515);
     padding: 15px;
     border-radius: 10px;
     min-width: 100px;

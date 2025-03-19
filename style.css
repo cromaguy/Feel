@@ -40,8 +40,8 @@ body.dark-mode {
 .container {
     border-radius: 20px;
     padding: 40px;
-    width: 90%;
-    max-width: 90%;
+    width: 85%;
+    max-width: 85%;
     background-color: var(--light-bg);
     box-shadow: var(--shadow);
     backdrop-filter: saturate(200%) blur(30px);

@@ -40,8 +40,8 @@ body.dark-mode {
 .container {
     border-radius: 20px;
     padding: 40px;
-    width: 100%;
-    max-width: 500px;
+    width: auto;
+    max-width: 90%;
     background-color: var(--light-bg);
     box-shadow: var(--shadow);
     backdrop-filter: saturate(200%) blur(30px);
@@ -425,6 +425,7 @@ body.dark-mode .search-history li {
     .container {
         border-radius: 20px;
         padding: 30px;
+        height: 100%;
     }
 
     .kiit-logo {

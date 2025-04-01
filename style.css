@@ -1,4 +1,3 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
@@ -10,6 +9,8 @@
     --dark-text: #333333;
     --shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s ease;
+    --card-bg-light: rgba(241, 241, 241, 0.721);
+    --card-bg-dark: rgba(66, 66, 66, 0.3);
 }
 
 body {
@@ -40,12 +41,15 @@ body.dark-mode {
 .container {
     border-radius: 20px;
     padding: 40px;
-    width: 85%;
-    max-width: 85%;
+    width: 100%;
+    max-width: 900px;
     background-color: var(--light-bg);
     box-shadow: var(--shadow);
     backdrop-filter: saturate(200%) blur(30px);
     transition: var(--transition);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
 
 body.dark-mode .container {
@@ -53,19 +57,24 @@ body.dark-mode .container {
     color: var(--light-text);
 }
 
-/* Header */
 .header {
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1 1fr;
+    align-items: center;
+    gap: 20px;
 }
 
 .kiit-logo {
-    width: 120px;
-    margin-bottom: 0px;
+    width: 100px;
     transition: transform 0.3s ease;
 }
 
+.header-text {
+    text-align: center;
+}
+
 .header h1 {
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
     font-weight: 600;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -73,7 +82,7 @@ body.dark-mode .container {
 }
 
 .header h3 {
-    margin-top: 0;
+    margin: 0;
     font-weight: 400;
     opacity: 0.8;
 }
@@ -88,15 +97,19 @@ body.dark-mode .container {
     -webkit-text-fill-color: white;
 }
 
-/* Search Box */
+.search-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
 .search-box {
     display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+    width: 100%;
 }
 
 input {
-    width: 90%;
+    flex: 1;
     padding: 12px 15px;
     border: none;
     border-radius: 10px 0 0 10px;
@@ -116,7 +129,6 @@ input:focus {
     box-shadow: 0 0 0 2px var(--primary-color);
 }
 
-/* Buttons */
 button {
     font-family: 'Poppins', sans-serif;
     padding: 12px 15px;
@@ -150,13 +162,10 @@ button:active {
 
 #locationBtn {
     width: 100%;
-    margin: 0 0 20px 0;
 }
 
-/* Weather Info */
 .weather-info {
     display: none;
-    margin-top: 25px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
@@ -169,7 +178,7 @@ body.dark-mode .weather-info {
 }
 
 .location-info {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .location-info h2 {
@@ -182,11 +191,16 @@ body.dark-mode .weather-info {
     opacity: 0.8;
 }
 
+.weather-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
 .weather-main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .weather-main img {
@@ -208,27 +222,27 @@ body.dark-mode .weather-info {
 
 .weather-metrics {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
-    margin-bottom: 20px;
 }
 
 .metric {
     display: flex;
     align-items: center;
-    background: rgba(241, 241, 241, 0.721);
-    padding: 10px;
+    background: var(--card-bg-light);
+    padding: 15px;
     border-radius: 10px;
     transition: var(--transition);
+    height: 100%;
 }
 
 body.dark-mode .metric {
-    background: rgba(66, 66, 66, 0.3);
+    background: var(--card-bg-dark);
 }
 
 .metric i {
     font-size: 24px;
-    margin-right: 10px;
+    margin-right: 15px;
     color: var(--primary-color);
 }
 
@@ -249,39 +263,54 @@ body.dark-mode .metric {
 }
 
 .sun-info {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.sun-info > div {
+    background: var(--card-bg-light);
+    padding: 15px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+body.dark-mode .sun-info > div {
+    background: var(--card-bg-dark);
 }
 
 .sun-info i {
     font-size: 24px;
     color: #ffc107;
+    margin-bottom: 5px;
 }
 
-/* Forecast */
 .forecast-container {
-    margin-top: 30px;
+    margin-top: 10px;
     display: none;
 }
 
+.forecast-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
 .forecast {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    width: 100%;
 }
 
 .forecast-item {
-    flex: 0 0 auto;
     background: rgba(255, 255, 255, 0.515);
     padding: 15px;
     border-radius: 10px;
-    min-width: 100px;
     transition: var(--transition);
 }
 
 body.dark-mode .forecast-item {
-    background: rgba(66, 66, 66, 0.3);
+    background: var(--card-bg-dark);
 }
 
 .forecast-item:hover {
@@ -292,7 +321,6 @@ body.dark-mode .forecast-item {
     width: 50px;
 }
 
-/* Theme Toggle */
 .theme-toggle {
     position: absolute;
     top: 20px;
@@ -309,9 +337,7 @@ body.dark-mode .forecast-item {
     justify-content: center;
 }
 
-/* Unit Toggle */
 .unit-toggle {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -331,25 +357,29 @@ body.dark-mode .unit-toggle button {
     color: var(--light-text);
 }
 
-/* Search History */
 .search-history {
-    margin-top: 30px;
     text-align: left;
     display: none;
+}
+
+.search-history h3 {
+    margin-top: 0;
 }
 
 .search-history ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
 }
 
 .search-history li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin-bottom: 5px;
+    padding: 10px 15px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     cursor: pointer;
@@ -357,20 +387,18 @@ body.dark-mode .unit-toggle button {
 }
 
 body.dark-mode .search-history li {
-    background: rgba(66, 66, 66, 0.3);
+    background: var(--card-bg-dark);
 }
 
 .search-history li:hover {
     background: rgba(0, 110, 255, 0.1);
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -383,7 +411,6 @@ body.dark-mode .search-history li {
     animation: fadeIn 0.5s ease-out;
 }
 
-/* Loading Spinner */
 .loader {
     display: none;
     width: 40px;
@@ -399,60 +426,91 @@ body.dark-mode .search-history li {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
 }
 
-/* Responsive Design */
+@media (min-width: 768px) {
+    .weather-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .weather-main {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
-        padding: 30px;
+        padding: 25px;
+        gap: 20px;
     }
+    
+    .forecast {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
 
-    .weather-metrics {
+@media (max-width: 600px) {
+    .header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .header-text {
+        text-align: center;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    input {
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    .search-box button {
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    .sun-info {
         grid-template-columns: 1fr;
     }
-
-    .sun-info {
-        flex-direction: column;
-        gap: 15px;
+    
+    .search-history ul {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        border-radius: 20px;
-        padding: 30px;
-        height: 100%;
+        padding: 20px;
+        gap: 15px;
     }
-
+    
     .kiit-logo {
         width: 80px;
     }
-
+    
     .header h1 {
         font-size: 24px;
     }
-
+    
     .weather-main .temp {
         font-size: 28px;
     }
-
-    .search-box {
-        flex-direction: column;
-        align-items: center;
+    
+    .metric {
+        padding: 12px;
     }
-
-    .search-box input {
-        min-width: 90%;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-
-    .search-box button {
-        width: 100%;
-        border-radius: 10px;
+    
+    .forecast-item {
+        padding: 12px;
     }
 }

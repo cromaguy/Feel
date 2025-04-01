@@ -489,6 +489,18 @@ body.dark-mode .search-history li {
 }
 
 @media (max-width: 480px) {
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        max-width: 90%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
     .container {
         padding: 20px;
         gap: 15px;
